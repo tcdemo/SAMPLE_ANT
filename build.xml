@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project  default="run" basedir="." name="Sample Ant">
+<target name="init">
+<mkdir dir="DemoClass"/>
+</target>
+	<target name="run" depends="init,jar">
+		<java classname="Demo">
+			<classpath path="DemoClass"> </classpath>
+		</java>
+	</target>
+	
+	<target name="compile">
+		<javac   includeantruntime="false" srcdir="." destdir="DemoClass"></javac>
+	</target>
+	
+	<target name="jar" depends="compile">
+		<jar basedir="DemoClass" destfile="sampleant.jar" >
+	<!--<includes name="*.class"/> -->
+		</jar>
+	</target>
+	
+	 
+</project> 
