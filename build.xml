@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project  default="run" basedir="." name="Sample Ant">
-<target name="init">
-<mkdir dir="DemoClass"/>
-</target>
+
+	<property name="version" value="1.0.0.0"/>
+
+	<target name="init">
+		<mkdir dir="DemoClass"/>
+	</target>
+
 	<target name="run" depends="init,jar">
 		<java classname="Demo">
 			<classpath path="DemoClass"> </classpath>
@@ -14,7 +18,7 @@
 	</target>
 	
 	<target name="jar" depends="compile">
-		<jar basedir="DemoClass" destfile="sampleant.jar" >
+		<jar basedir="DemoClass1" destfile="sampleant-${version}.jar" >
 	<!--<includes name="*.class"/> -->
 		</jar>
 	</target>
