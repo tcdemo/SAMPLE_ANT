@@ -18,7 +18,7 @@
 	</target>
 	
 	<target name="jar" depends="compile">
-		<jar basedir="DemoClass1" destfile="sampleant-${version}.jar" >
+		<jar basedir="DemoClass" destfile="sampleant-${version}.jar" >
 	<!--<includes name="*.class"/> -->
 		</jar>
 	</target>
